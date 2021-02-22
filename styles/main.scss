@@ -1,0 +1,97 @@
+@import 'normalize';
+
+$white: #ffffff;
+$background: #fcfcfc;
+$primary: #1d1d1d;
+$accent: #29a651;
+$link: #63b57d;
+
+// * Typography
+:root {
+	font-size: 21px;
+	font-family: fira-sans, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	color: $primary;
+	background-color: $white;
+}
+h1,
+h2,
+h3 {
+	font-family: pauline, sans-serif;
+}
+a {
+	color: $link;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.wrap,
+nav {
+	margin: 0 auto;
+	padding: 0 1em;
+	max-width: 800px;
+	box-sizing: content-box;
+}
+
+.columns {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 1em;
+	justify-content: space-evenly;
+}
+
+.logo {
+	img {
+		width: 100px;
+	}
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+header .wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section {
+	text-align: center;
+}
+
+section:nth-of-type(even) {
+	background-color: $background;
+}
+
+section,
+footer {
+	padding: 1em 0;
+}
+
+footer {
+	text-align: center;
+	color: $white;
+	background-color: $accent;
+	padding: 1em 0;
+
+	a {
+		color: $white;
+	}
+
+	.logo {
+		display: inline-block;
+		margin: 4em 0;
+	}
+}
