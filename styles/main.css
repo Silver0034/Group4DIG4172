@@ -347,7 +347,11 @@ template {
   font-weight: 300;
   font-style: normal;
   color: #1d1d1d;
-  background-color: #ffffff;
+  background-color: #29a651;
+}
+
+body {
+  background: #ffffff;
 }
 
 h1,
@@ -359,6 +363,10 @@ h3 {
 a {
   color: #63b57d;
   text-decoration: none;
+}
+
+a.active {
+  color: #29a651;
 }
 
 img {
@@ -388,6 +396,7 @@ nav {
 
 .hasBackground {
   position: relative;
+  padding-bottom: 2em;
 }
 
 .hasBackground .backgroundImage {
@@ -544,7 +553,7 @@ nav .links {
 }
 
 header {
-  padding-bottom: 2em;
+  text-align: center;
 }
 
 header .wrap {
@@ -552,6 +561,7 @@ header .wrap {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  text-align: left;
 }
 
 header .wrap h1,
@@ -588,7 +598,7 @@ section:nth-of-type(even) {
 
 section,
 footer {
-  padding: 2em 0;
+  padding: 1em 0;
 }
 
 footer {
