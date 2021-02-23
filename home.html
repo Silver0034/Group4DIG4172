@@ -13,18 +13,60 @@
 		<title>HTML PROTOTYPE</title>
 	</head>
 	<body>
-		<nav>
+		<nav class="aboveContent">
 			<a href="#" class="logo">
 				<img src="images/placeholder-image.png" alt="Logo" />
 			</a>
-			<div class="link">
+			<a href="#navigation" class="openMenu icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					version="1.1"
+					width="20"
+					height="20"
+					viewBox="0 0 20 20"
+				>
+					<path
+						d="M17.5 6h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
+					></path>
+					<path
+						d="M17.5 11h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
+					></path>
+					<path
+						d="M17.5 16h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
+					></path>
+				</svg>
+			</a>
+			<div id="navigation" class="links">
+				<a href="#" class="logo">
+					<img src="images/placeholder-image.png" alt="Logo" />
+				</a>
+				<a id="closeMenu" class="menuClose icon" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						enable-background="new 0 0 24 24"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<g><path d="M0,0h24v24H0V0z" fill="none" /></g>
+						<g>
+							<g>
+								<path
+									d="M18.3,5.71L18.3,5.71c-0.39-0.39-1.02-0.39-1.41,0L12,10.59L7.11,5.7c-0.39-0.39-1.02-0.39-1.41,0l0,0 c-0.39,0.39-0.39,1.02,0,1.41L10.59,12L5.7,16.89c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,0.39,1.02,0.39,1.41,0L12,13.41l4.89,4.89 c0.39,0.39,1.02,0.39,1.41,0l0,0c0.39-0.39,0.39-1.02,0-1.41L13.41,12l4.89-4.89C18.68,6.73,18.68,6.09,18.3,5.71z"
+								/>
+							</g>
+						</g>
+					</svg>
+				</a>
 				<a href="#">Articles</a>
 				<a href="#">Our Fight</a>
 				<a href="#">How We Work</a>
 				<a href="#">Take Action</a>
+				<a id="backdrop" class="menuClose shadow" href="#"></a>
 			</div>
 		</nav>
-		<header>
+		<header class="hasBackground">
 			<div class="wrap">
 				<h1>Tincidunt dui ut ornare lectus</h1>
 				<p>
@@ -33,7 +75,10 @@
 					aliqua.
 				</p>
 			</div>
-			<div class="backgroundImage"></div>
+			<div
+				class="backgroundImage"
+				style="background-image: url(images/placeholder-image.png)"
+			></div>
 		</header>
 		<section>
 			<div class="wrap">
