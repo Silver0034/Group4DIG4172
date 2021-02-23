@@ -180,10 +180,26 @@ nav {
 	}
 }
 
-header .wrap {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+header {
+	padding-bottom: 2em;
+	.wrap {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		h1,
+		p {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@include breakpoint('mobile') {
+			grid-template-columns: 1fr;
+			h1,
+			p {
+				text-align: center;
+			}
+		}
+	}
 }
 
 section {
