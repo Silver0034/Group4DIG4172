@@ -1,0 +1,120 @@
+@use '../abstracts' as a;
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-transform: uppercase;
+	font-weight: 700;
+	z-index: 1;
+
+	&.aboveContent {
+		position: absolute;
+		left: 0;
+		right: 0;
+		box-sizing: content-box;
+		padding-left: 1em;
+
+		+ header,
+		+ section {
+			padding-top: 6em;
+		}
+
+		.logo {
+			margin-top: 2em;
+		}
+	}
+
+	@include a.breakpoint('mobile') {
+		padding-top: 2em;
+	}
+
+	.openMenu {
+		position: absolute;
+		top: 2em;
+		right: 2em;
+		svg {
+			width: 2em;
+			height: 2em;
+			fill: a.$link;
+		}
+		@include a.breakpoint('desktop') {
+			display: none;
+		}
+	}
+
+	.links {
+		transition: transform 0.4s;
+		transition-timing-function: cubic-bezier(0.34, 0.1, 0.23, 1.12);
+		@include a.breakpoint('mobile') {
+			position: fixed;
+			display: flex;
+			top: 0;
+			bottom: 0;
+			left: -2em;
+			right: 2em;
+
+			&:not(:target) {
+				transform: translateX(calc(-100% - 2em));
+			}
+
+			background-color: a.$accent;
+
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-shadow: 0.25em 0 0.5em rgba(a.$primary, 0.25);
+			> *:not(:last-child) {
+				margin-bottom: 2em;
+			}
+
+			a {
+				display: block;
+				text-align: center;
+			}
+
+			.logo {
+				position: absolute;
+				top: 2em;
+				left: 4em;
+				margin: 0;
+			}
+
+			.icon {
+				position: absolute;
+				top: 2em;
+				right: 2em;
+				svg {
+					width: 2em;
+					height: 2em;
+					fill: a.$white;
+				}
+			}
+
+			.shadow {
+				position: absolute;
+				top: 0;
+				right: -2em;
+				bottom: 0;
+				width: 2em;
+				opacity: 0.75;
+				background-color: a.$primary;
+			}
+
+			* {
+				color: a.$white;
+			}
+		}
+		@include a.breakpoint('desktop') {
+			a {
+				margin-left: 1em;
+			}
+			.logo,
+			.menuClose {
+				display: none;
+			}
+		}
+	}
+}

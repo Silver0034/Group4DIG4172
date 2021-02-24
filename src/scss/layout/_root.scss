@@ -1,0 +1,6 @@
+@use '../abstracts' as a;
+
+:root {
+	color: a.$primary;
+	background-color: a.$accent;
+}

@@ -1,0 +1,26 @@
+@use '../abstracts' as a;
+footer {
+	padding: 1em 0;
+	text-align: center;
+	color: a.$white;
+	background-color: a.$accent;
+	padding: 1em 0;
+
+	a {
+		color: a.$white;
+	}
+
+	.logo {
+		display: inline-block;
+		margin: 4em 0;
+	}
+
+	nav {
+		@include a.breakpoint('mobile') {
+			flex-direction: column;
+			> *:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}

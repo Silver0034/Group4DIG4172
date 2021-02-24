@@ -1,0 +1,23 @@
+{
+  "name": "Group4DIG4172",
+  "version": "1.0.0",
+  "description": "Group4DIG4172",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silver0034/Group4DIG4172.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silver0034/Group4DIG4172/issues"
+  },
+  "homepage": "https://github.com/Silver0034/Group4DIG4172#readme",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

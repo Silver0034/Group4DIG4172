@@ -44,8 +44,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -82,8 +81,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -189,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -199,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -230,8 +228,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -263,10 +260,9 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type='checkbox'],
-[type='radio'] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -275,8 +271,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -284,7 +280,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type='search'] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -294,7 +290,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type='search']::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -350,10 +346,6 @@ template {
   background-color: #29a651;
 }
 
-body {
-  background: #ffffff;
-}
-
 h1,
 h2,
 h3 {
@@ -369,37 +361,66 @@ a.active {
   color: #29a651;
 }
 
-img {
-  max-width: 100%;
+:root {
+  color: #1d1d1d;
+  background-color: #29a651;
 }
 
-.wrap,
-nav {
-  margin: 0 auto;
-  padding: 0 1em;
-  max-width: 800px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+body {
+  background: #ffffff;
 }
 
-.columns {
-  display: -ms-grid;
+footer {
+  padding: 1em 0;
+  text-align: center;
+  color: #ffffff;
+  background-color: #29a651;
+  padding: 1em 0;
+}
+footer a {
+  color: #ffffff;
+}
+footer .logo {
+  display: inline-block;
+  margin: 4em 0;
+}
+@media (max-width: 768px) {
+  footer nav {
+    flex-direction: column;
+  }
+  footer nav > *:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+
+header {
+  text-align: center;
+}
+header .wrap {
   display: grid;
-  width: 100%;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 1em;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
 }
-
-.hasBackground {
+header .wrap h1,
+header .wrap p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  header .wrap {
+    grid-template-columns: 1fr;
+  }
+  header .wrap h1,
+header .wrap p {
+    text-align: center;
+  }
+}
+header.hasBackground {
   position: relative;
   padding-bottom: 2em;
 }
-
-.hasBackground .backgroundImage {
+header.hasBackground .backgroundImage {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -410,101 +431,70 @@ nav {
   z-index: -1;
 }
 
-.logo img {
-  width: 100px;
-}
-
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 1em;
   padding-bottom: 1em;
   text-transform: uppercase;
   font-weight: 700;
   z-index: 1;
 }
-
 nav.aboveContent {
   position: absolute;
   left: 0;
   right: 0;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   padding-left: 1em;
 }
-
 nav.aboveContent + header,
 nav.aboveContent + section {
   padding-top: 6em;
 }
-
+nav.aboveContent .logo {
+  margin-top: 2em;
+}
 @media (max-width: 768px) {
   nav {
     padding-top: 2em;
   }
 }
-
 nav .openMenu {
   position: absolute;
   top: 2em;
   right: 2em;
 }
-
 nav .openMenu svg {
   width: 2em;
   height: 2em;
   fill: #63b57d;
 }
-
 @media (min-width: 769px) {
   nav .openMenu {
     display: none;
   }
 }
-
 nav .links {
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-  -webkit-transition-timing-function: cubic-bezier(0.34, 0.1, 0.23, 1.12);
-          transition-timing-function: cubic-bezier(0.34, 0.1, 0.23, 1.12);
+  transition-timing-function: cubic-bezier(0.34, 0.1, 0.23, 1.12);
 }
-
 @media (max-width: 768px) {
   nav .links {
     position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     top: 0;
     bottom: 0;
     left: -2em;
     right: 2em;
     background-color: #29a651;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-shadow: 0.25em 0 0.5em rgba(29, 29, 29, 0.25);
-            box-shadow: 0.25em 0 0.5em rgba(29, 29, 29, 0.25);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0.25em 0 0.5em rgba(29, 29, 29, 0.25);
   }
   nav .links:not(:target) {
-    -webkit-transform: translateX(calc(-100% - 2em));
-            transform: translateX(calc(-100% - 2em));
+    transform: translateX(calc(-100% - 2em));
   }
   nav .links > *:not(:last-child) {
     margin-bottom: 2em;
@@ -517,6 +507,7 @@ nav .links {
     position: absolute;
     top: 2em;
     left: 4em;
+    margin: 0;
   }
   nav .links .icon {
     position: absolute;
@@ -541,90 +532,46 @@ nav .links {
     color: #ffffff;
   }
 }
-
 @media (min-width: 769px) {
   nav .links a {
     margin-left: 1em;
   }
   nav .links .logo,
-  nav .links .menuClose {
+nav .links .menuClose {
     display: none;
-  }
-}
-
-header {
-  text-align: center;
-}
-
-header .wrap {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  text-align: left;
-}
-
-header .wrap h1,
-header .wrap p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (max-width: 768px) {
-  header .wrap {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  header .wrap h1,
-  header .wrap p {
-    text-align: center;
   }
 }
 
 section {
   text-align: center;
+  padding: 1em 0;
 }
-
 section:nth-of-type(even) {
   background-color: #fcfcfc;
 }
 
-section,
-footer {
-  padding: 1em 0;
+.columns {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1em;
+  justify-content: space-evenly;
 }
 
-footer {
-  text-align: center;
-  color: #ffffff;
-  background-color: #29a651;
-  padding: 1em 0;
+img {
+  max-width: 100%;
 }
 
-footer a {
-  color: #ffffff;
+.logo img {
+  width: 100px;
 }
 
-footer .logo {
-  display: inline-block;
-  margin: 4em 0;
+.wrap,
+nav {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 800px;
+  box-sizing: content-box;
 }
 
-@media (max-width: 768px) {
-  footer nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  footer nav > *:not(:last-child) {
-    margin-bottom: 1em;
-  }
-}
+/*# sourceMappingURL=main.css.map */
