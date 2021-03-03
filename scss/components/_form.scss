@@ -1,0 +1,14 @@
+@use '../abstracts' as a;
+
+form {
+	padding: 2em 0;
+	.col-2 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.5em;
+		@include a.breakpoint('mobile') {
+			grid-template-columns: 1fr;
+			gap: 0;
+		}
+	}
+}

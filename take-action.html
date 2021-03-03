@@ -6,16 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- Fonts -->
 		<link rel="stylesheet" href="https://use.typekit.net/efs4lzw.css" />
-		<!-- development: standard css -->
-		<link rel="stylesheet" href="styles/css/main.css" />
-		<!-- production: minified styles -->
-		<!-- <link rel="stylesheet" href="main.min.css" /> -->
+		<!-- import styles -->
+		<link rel="stylesheet" href="css/main.css" />
+
 		<title>Take Action - Freedom Pups</title>
 	</head>
 	<body>
 		<nav class="aboveContent">
 			<a href="home.html" class="logo">
-				<img src="images/placeholder-image.png" alt="Logo" />
+				<img src="images/primary-logo.png" alt="Logo" />
 			</a>
 			<a href="#navigation" class="openMenu icon">
 				<svg
@@ -39,7 +38,7 @@
 			</a>
 			<div id="navigation" class="links">
 				<a href="home.html" class="logo">
-					<img src="images/placeholder-image.png" alt="Logo" />
+					<img src="images/white-logo.png" alt="Logo" />
 				</a>
 				<a id="closeMenu" class="menuClose icon" href="#">
 					<svg
@@ -80,7 +79,35 @@
 		</section>
 		<section>
 			<div class="wrap">
-				<p>Put the form here</p>
+				<form action="">
+					<div class="col-2">
+						<label>
+							<p>First Name*</p>
+							<input
+								id="firstName"
+								type="text"
+								placeholder="First Name"
+							/>
+						</label>
+						<label>
+							<p>Last Name*</p>
+							<input
+								id="lastName"
+								type="text"
+								placeholder="Last Name"
+							/>
+						</label>
+					</div>
+					<label>
+						<p>Email*</p>
+						<input
+							id="email"
+							type="text"
+							placeholder="Email Address"
+						/>
+					</label>
+					<input type="submit" value="Sign the Petition!" />
+				</form>
 			</div>
 		</section>
 		<footer>
@@ -91,8 +118,8 @@
 					<a href="#">How We Work</a>
 					<a href="#">Take Action</a>
 				</nav>
-				<a class="logo" href="#">
-					<img src="images/placeholder-image.png" alt="Logo" />
+				<a class="logo" href="home.html">
+					<img src="images/white-logo.png" alt="Logo" />
 				</a>
 				<p>© Copyright 2021 Freedom Pups</p>
 				<p>

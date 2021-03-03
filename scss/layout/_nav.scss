@@ -21,10 +21,6 @@ nav {
 		+ section {
 			padding-top: 6em;
 		}
-
-		.logo {
-			margin-top: 2em;
-		}
 	}
 
 	@include a.breakpoint('mobile') {
@@ -117,4 +113,11 @@ nav {
 			}
 		}
 	}
+}
+
+body > nav:first-child {
+	max-width: 800px;
+	box-sizing: content-box;
+	margin-left: auto;
+	margin-right: auto;
 }
