@@ -24,7 +24,15 @@ header {
 	&.hasBackground {
 		position: relative;
 		padding-bottom: 2em;
-
+		background-size: cover;
+		background-image: url(../images/home-header.jpg);
+		background: linear-gradient(
+				rgb(255 255 255 / 80%),
+				rgb(255 255 255 / 60%)
+			),
+			url(../images/home-header.jpg);
+		background-size: cover;
+		background-position: center;
 		.backgroundImage {
 			position: absolute;
 			top: 0;
@@ -33,7 +41,6 @@ header {
 			right: 0;
 			background-size: cover;
 			background-position: center;
-			z-index: -1;
 		}
 	}
 }
