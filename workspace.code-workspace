@@ -2,7 +2,13 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"name": "Group4DIG4172 @ 1ee84e6",
+			"uri": "gitlens://1ee84e6/d:/dev/Group4DIG4172?{\"path\":\"/d:/dev/Group4DIG4172\",\"ref\":\"1ee84e685b505ab8f8914ee9d55e43c0ea4a76fe\",\"repoPath\":\"d:/dev/Group4DIG4172\"}"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Group4DIG4172"
+	}
 }
