@@ -390,6 +390,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 a.active {
   color: #29a651;
   text-decoration: underline;
@@ -633,6 +637,9 @@ img {
 /*# sourceMappingURL=main.css.map */
 /*styles list on home page*/
 #factList {
+  text-align: left;
+}
+ul {
   text-align: left;
 }
 li{
