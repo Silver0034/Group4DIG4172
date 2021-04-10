@@ -392,6 +392,7 @@ a {
 
 a.active {
   color: #29a651;
+  text-decoration: underline;
 }
 
 :root {
@@ -415,7 +416,7 @@ footer a {
 }
 footer .logo {
   display: inline-block;
-  margin: 4em 0;
+  margin: 2em 0;
 }
 @media (max-width: 768px) {
   footer nav {
@@ -630,3 +631,10 @@ img {
 }
 
 /*# sourceMappingURL=main.css.map */
+/*styles list on home page*/
+#factList {
+  text-align: left;
+}
+li{
+  margin: 10px 0;
+}
